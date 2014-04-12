@@ -71,7 +71,7 @@
       .find('p.lights-on-message')
       .html(settings.closeText);
 
-    $('body').append(lightsOffOverlay);
+    $('body').append(lightsOffOverlay).addClass('lights-off');
     lightsOffOverlay.delay(10).addClass('lights-off');
 
     return this;
@@ -83,6 +83,7 @@
 
   $.lightsOn = function() {
     $(".lighted").removeClass('lighted');
+    $("body").removeClass('lights-off');
     lightsOffOverlay.remove();
   }
 
