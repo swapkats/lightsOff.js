@@ -1,67 +1,142 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>Lightsoff.js by embibeswapnil</title>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Lightsoff.js : A JQuery plugin to show nice guided tour of various elements on your page" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Lightsoff.js</title>
   </head>
 
   <body>
-    <div id="container">
-      <div class="inner">
 
-        <header>
-          <h1>Lightsoff.js</h1>
-          <h2>A JQuery plugin to show nice guided tour of various elements on your page</h2>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/jsmonk/lightsOff.js">View on GitHub</a>
+
+          <h1 id="project_title">Lightsoff.js</h1>
+          <h2 id="project_tagline">A JQuery plugin to show nice guided tour of various elements on your page</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/jsmonk/lightsOff.js/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/jsmonk/lightsOff.js/tarball/master">Download this project as a tar.gz file</a>
+            </section>
         </header>
+    </div>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/embibeswapnil/lightsOff/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/embibeswapnil/lightsOff/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/embibeswapnil/lightsOff" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
-
-        <hr>
-
-        <section id="main_content">
-          <h1>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
 <a name="lightsoff" class="anchor" href="#lightsoff"><span class="octicon octicon-link"></span></a>lightsOff</h1>
 
-<p>A JQuery plugin to show nice guided tour of various elements on your page</p>
+<blockquote>
+<p>A lightweight JQuery plugin (6kb minified) to show nice guided introductions of various elements on your page.</p>
+</blockquote>
 
 <ul>
-<li>[embibeswapnil.github.io/lightsOff/]<a href="http://embibeswapnil.github.io/lightsOff/">http://embibeswapnil.github.io/lightsOff/</a>
+<li><a href="http://jsmonk.github.io/lightsOff.js/">Demo</a></li>
+</ul><h2>
+<a name="setup" class="anchor" href="#setup"><span class="octicon octicon-link"></span></a>Setup</h2>
+
+<p>lightOff is very simple to set up, follow these three simple steps.</p>
+
+<p>1) Include JQuery, lightsoff.js and lightsoff.css in your page</p>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"src/lightsOff.css"</span><span class="nt">&gt;</span> 
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"js/jquery.js"</span><span class="nt">&gt;</span>  
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"src/lightsOff.min.js"</span><span class="nt">&gt;</span>
+</pre></div>
+
+<p>2) Add <code>data-intro</code> and <code>data-intro-position</code> to your HTML elements.</p>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"example.com"</span> <span class="na">data-intro=</span><span class="s">"Click here to visit example.com"</span> <span class="na">data-intro-position=</span><span class="s">"top"</span><span class="nt">&gt;</span>example.com<span class="nt">&lt;/a&gt;</span>
+</pre></div>
+
+<p>3) Call this function after your page loads.</p>
+
+<div class="highlight highlight-javascript"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">lightsOn</span><span class="p">();</span>
+</pre></div>
+
+<h2>
+<a name="api" class="anchor" href="#api"><span class="octicon octicon-link"></span></a>API</h2>
+
+<h3>
+<a name="data-intro" class="anchor" href="#data-intro"><span class="octicon octicon-link"></span></a>data-intro</h3>
+
+<p>Defines the text to be shown for lighted element</p>
+
+<h3>
+<a name="data-intro-position-string" class="anchor" href="#data-intro-position-string"><span class="octicon octicon-link"></span></a>data-intro-position [string]</h3>
+
+<p>Defines the position of the squiggle relative to element.</p>
+
+<p><strong>values:</strong> <code>top</code>,<code>left</code>,<code>right</code>,<code>bottom</code></p>
+
+<h3>
+<a name="font-string" class="anchor" href="#font-string"><span class="octicon octicon-link"></span></a>font [string]</h3>
+
+<p>Defines the font to be used for squiggle screen.</p>
+
+<h3>
+<a name="closetext-string" class="anchor" href="#closetext-string"><span class="octicon octicon-link"></span></a>closeText [string]</h3>
+
+<p>Defines the text message to go back.</p>
+
+<h3>
+<a name="lightson-function" class="anchor" href="#lightson-function"><span class="octicon octicon-link"></span></a>lightsOn [function]</h3>
+
+<p>Use this function to turn lights back on.</p>
+
+<div class="highlight highlight-javascript"><pre><span class="nx">$</span><span class="p">.</span><span class="nx">lightsOff</span><span class="p">();</span>
+</pre></div>
+
+<h2>
+<a name="author" class="anchor" href="#author"><span class="octicon octicon-link"></span></a>Author</h2>
+
+<p><strong>Swapnil Singh</strong></p>
+
+<ul>
+<li><a href="https://twitter.com/biryani_hunter">Twitter</a></li>
+<li><a href="https://github.com/jsmonk">Github</a></li>
+<li>
+<a href="http://amplifiedmonkeys.com/">Personal page</a><br>
 </li>
-</ul><h1>
-<a name="get-started" class="anchor" href="#get-started"><span class="octicon octicon-link"></span></a>Get Started</h1>
+</ul><h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
 
-<p>Include JQuery, lightsoff.js and lightsoff.css</p>
+<blockquote>
+<p>Copyright (C) 2014 Swapnil Singh (<a href="mailto:thisisnotaid@gmail.com">thisisnotaid@gmail.com</a>)</p>
+</blockquote>
 
-<p><code>data-intro="your text" data-intro-position="left/top/right/bottom"</code>
-<code>$.lightsOff()</code>
-<code>$.lightsOn()</code></p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated 
+documentation files (the "Software"), to deal in the Software without restriction, including without limitation 
+the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, 
+and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions 
+of the Software.</p>
 
-<h1>
-<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h1>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED 
+TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL 
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF 
+CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
+IN THE SOFTWARE.</p>
+      </section>
+    </div>
 
-<p><strong>Font</strong>
-<strong>closeText</strong>
-<strong>position</strong></p>
-        </section>
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Lightsoff.js maintained by <a href="https://github.com/jsmonk">jsmonk</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
 
-        <footer>
-          Lightsoff.js is maintained by <a href="https://github.com/embibeswapnil">embibeswapnil</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-                  <script type="text/javascript">
+              <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -72,7 +147,6 @@
             } catch(err) {}
           </script>
 
-      </div>
-    </div>
+
   </body>
 </html>
