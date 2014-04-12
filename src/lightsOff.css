@@ -1,0 +1,133 @@
+@font-face {
+  font-family: 'Comic Neue';
+  src: url('../fonts/ComicNeue-Light-Oblique.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/ComicNeue-Light-Oblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/ComicNeue-Light-Oblique.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/ComicNeue-Light-Oblique.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight: 100;
+  font-style: oblique;
+}
+
+.lighted {
+	position: relative;
+	z-index: 999999999;
+}
+
+.lights-off-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 999999998;
+	background-color: rgba(0,0,0,0);
+	visibility: hidden;
+	font-family: 'Comic Neue', 'Comic Sans', serif;
+	color: #fff;
+	-webkit-transition: .3s background-color ease-in-out;
+	-moz-transition: .3s background-color ease-in-out;
+	-ms-transition: .3s background-color ease-in-out;
+	-o-transition: .3s background-color ease-in-out;
+	transition: .3s background-color ease-in-out;
+}
+
+.lights-off-overlay.lights-off {
+	visibility: visible;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.lights-off-overlay .squiggle {
+	position: absolute;
+}
+
+.lights-off-overlay .squiggle figure {
+	width: 38px;
+	height: 20px;
+	background-image: url('../img/marker.png');
+}
+
+.lights-off-overlay .squiggle p {
+	max-width: 200px;
+}
+
+.lights-off-overlay .squiggle-right figure {
+	-webkit-transform: rotate(65deg);
+	-moz-transform: rotate(65deg);
+	-ms-transform: rotate(65deg);
+	-o-transform: rotate(65deg);
+	transform: rotate(65deg);
+}
+
+.lights-off-overlay .squiggle-right p {
+	margin-left: 10px;
+}
+
+.lights-off-overlay .squiggle-bottom {
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+.lights-off-overlay .squiggle-bottom figure {
+	margin-top: 8px;
+	-webkit-transform: rotate(75deg);
+	-moz-transform: rotate(75deg);
+	-ms-transform: rotate(75deg);
+	-o-transform: rotate(75deg);
+	transform: rotate(75deg);
+}
+
+
+.lights-off-overlay .squiggle-top {
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	-o-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+.lights-off-overlay .squiggle-top figure {
+	position: absolute;
+	bottom: 5px;
+	-webkit-transform: rotate(-15deg);
+	-moz-transform: rotate(-15deg);
+	-ms-transform: rotate(-15deg);
+	-o-transform: rotate(-15deg);
+	transform: rotate(-15deg);
+}
+
+.lights-off-overlay .squiggle-top p {
+	margin-bottom: 30px;
+}
+
+
+.lights-off-overlay .squiggle-left {
+	-webkit-transform: translateX(-100%);
+	-moz-transform: translateX(-100%);
+	-ms-transform: translateX(-100%);
+	-o-transform: translateX(-100%);
+	transform: translateX(-100%);
+}
+
+.lights-off-overlay .squiggle-left figure {
+	-webkit-transform: rotateZ(110deg) rotateX(180deg) translateY(25px);
+	-moz-transform: rotateZ(110deg) rotateX(180deg) translateY(25px);
+	-ms-transform: rotateZ(110deg) rotateX(180deg) translateY(25px);
+	-o-transform: rotateZ(110deg) rotateX(180deg) translateY(25px);
+	transform: rotateZ(110deg) rotateX(180deg) translateY(25px);
+}
+
+.lights-off-overlay .squiggle-left p {
+	margin-right: 10px;
+}
+
+.lights-on-message {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 10px 20px;
+	background: rgba(255, 255, 255, 0.1);
+}

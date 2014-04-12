@@ -7,7 +7,8 @@
     <meta name="description" content="Lightsoff.js : A JQuery plugin to show nice guided tour of various elements on your page" />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
+    <link rel="stylesheet" type="text/css" media="screen" href="src/lightsOff.css">
+    <link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
     <title>Lightsoff.js</title>
   </head>
 
@@ -16,13 +17,13 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <a id="forkme_banner" href="https://github.com/jsmonk/lightsOff.js">View on GitHub</a>
+          <a id="forkme_banner" href="https://github.com/jsmonk/lightsOff.js" >View on GitHub</a>
 
-          <h1 id="project_title">Lightsoff.js</h1>
+          <h1 id="project_title" data-intro="This is my page title being explained with lighsOff.js" data-intro-position="bottom">Lightsoff.js</h1>
           <h2 id="project_tagline">A JQuery plugin to show nice guided tour of various elements on your page</h2>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/jsmonk/lightsOff.js/zipball/master">Download this project as a .zip file</a>
+            <section id="downloads" >
+              <a class="zip_download_link" href="https://github.com/jsmonk/lightsOff.js/zipball/master" >Download this project as a .zip file</a>
               <a class="tar_download_link" href="https://github.com/jsmonk/lightsOff.js/tarball/master">Download this project as a tar.gz file</a>
             </section>
         </header>
@@ -38,9 +39,8 @@
 <p>A lightweight JQuery plugin (6kb minified) to show nice guided introductions of various elements on your page.</p>
 </blockquote>
 
-<ul>
-<li><a href="http://jsmonk.github.io/lightsOff.js/">Demo</a></li>
-</ul><h2>
+<button id="showTour">Turn lights Off</button>
+<h2>
 <a name="setup" class="anchor" href="#setup"><span class="octicon octicon-link"></span></a>Setup</h2>
 
 <p>lightOff is very simple to set up, follow these three simple steps.</p>
@@ -147,6 +147,8 @@ IN THE SOFTWARE.</p>
             } catch(err) {}
           </script>
 
-
+  <script type="text/javascript" src="javascripts/jquery.js"></script>
+  <script type="text/javascript" src="src/lightsOff.js"></script>
+  <script type="text/javascript" src="javascripts/main.js"></script>
   </body>
 </html>
