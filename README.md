@@ -2,7 +2,7 @@
 
 > A lightweight JQuery plugin (6kb minified) to show nice guided introductions of various elements on your page.
 
- - [Demo](http://embibeswapnil.github.io/lightsOff.js/)
+ - [Demo](http://swapkats.github.io/lightsOff.js/)
          
 ## Setup
 
