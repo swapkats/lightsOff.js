@@ -77,7 +77,7 @@
     return this;
   };
 
-  lightsOffOverlay.bind('click',function(){
+  $('.lights-off-overlay').click(function(){
     $.lightsOn();
   })
 
