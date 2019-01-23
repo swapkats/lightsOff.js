@@ -12,8 +12,8 @@ lightOff is very simple to set up, follow these three simple steps.
 
 ```html
 <link href="src/lightsOff.css">	
-<link href="js/jquery.js">	
-<link href="src/lightsOff.min.js">
+<script src="js/jquery.js"></script>
+<script src="src/lightsOff.min.js"></script>
 ````
 
 2) Add `data-intro` and `data-intro-position` to your HTML elements.
